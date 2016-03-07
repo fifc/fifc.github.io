@@ -2,7 +2,8 @@
 <html>
 <head>
 <script>
-	if (navigator.platform.indexOf("iPhone") != -1) {
+	if (navigator.platform.indexOf("iPhone") != -1
+	 || navigator.platform.indexOf("Linux arm") != -1) {
 		window.location="m";
 	}
 	document.write("You are using " + navigator.platform + "<br>")
