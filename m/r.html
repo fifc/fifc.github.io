@@ -10,6 +10,8 @@
     <script src="/react-dom.min.js"></script>
     <script src="helloworld.js"></script>
 
+    <p><script>document.write("You are using " + navigator.platform + "<br>")</script></p>
+
     <h1>Basic Example</h1>
     <div id="container">
       <p>
@@ -27,7 +29,6 @@
       Learn more about React at
       <a href="https://facebook.github.io/react" target="_blank">facebook.github.io/react</a>.
     </p>
-    <p><script>document.write("You are using " + navigator.platform + "<br>")</script></p>
     <script>
       var ExampleApplication = React.createClass({
         render: function() {
