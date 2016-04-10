@@ -7,60 +7,18 @@
                 window.location="w";
         }
     </script>
-    <title>Hello React!</title>
+    <title>Hello, World!</title>
   </head>
   <body>
-    <div id="example"></div>
-    <script src="react.min.js"></script>
-    <script src="react-dom.min.js"></script>
-    <script src="helloworld.js"></script>
+    <h1>Hello, World!</h1>
 
-    <p><script>document.write("You are using " + navigator.platform + "<br>")</script></p>
+    <iframe src=frame1.html> </iframe>
 
-    <h1>Basic Example</h1>
-    <div id="container">
-      <p>
-        To install React, follow the instructions on
-        <a href="https://github.com/facebook/react/">GitHub</a>.
-      </p>
-      <p>
-        If you can see this, React is <strong>not</strong> working right.
-        If you checked out the source from GitHub make sure to run <code>grunt</code>.
-      </p>
-    </div>
-    <h4>Example Details</h4>
-    <p>This is written in vanilla JavaScript (without JSX) and transformed in the browser.</p>
-    <p>
-      Learn more about React at
-      <a href="https://facebook.github.io/react" target="_blank">facebook.github.io/react</a>.
-    </p>
-    <script>
-      var ExampleApplication = React.createClass({
-        render: function() {
-          var elapsed = Math.round(this.props.elapsed  / 100);
-          var seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );
-          var message =
-            'React has been successfully running for ' + seconds + ' seconds.';
-
-          return React.DOM.p(null, message);
-        }
-      });
-
-      // Call React.createFactory instead of directly call ExampleApplication({...}) in React.render
-      var ExampleApplicationFactory = React.createFactory(ExampleApplication);
-
-      var start = new Date().getTime();
-      setInterval(function() {
-        ReactDOM.render(
-          ExampleApplicationFactory({elapsed: new Date().getTime() - start}),
-          document.getElementById('container')
-        );
-      }, 1000);
-    </script>
-
-    <p><a href="https://www.easycounter.com/">
-      <img src="https://www.easycounter.com/counter.php?fxfar" border="0" alt="HTML Hit Counters">
-    </a></p>
+    <br>
+    <a href="r.html">React Test Page</a>
+    <a href="https://www.easycounter.com/">
+    <img src="https://www.easycounter.com/counter.php?fxfar"
+      border="0" alt="HTML Hit Counters"></a>
 
   </body>
 </html>
