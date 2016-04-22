@@ -3,6 +3,21 @@
   <head>
     <script>
       document.write("You are using " + navigator.platform + "<br>")
+      function getUrl() {
+        if (!parent)
+          return "";
+          
+        var metas = parent.document.getElementsByTagName('meta'); 
+
+        for (var i=0; i<metas.length; i++) { 
+           if (metas[i].getAttribute("name") == "url") { 
+             return metas[i].getAttribute("content"); 
+           } 
+        }
+
+        return "";
+      } 
+      
     </script>
   <title> welcome to my web site </title>
   </head>
