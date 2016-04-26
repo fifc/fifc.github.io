@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <script>
         if (navigator.platform.indexOf("Win32") != -1) {
-                window.location="w?l="+window.location.href;
+		var url = window.location.href;
+		var query = url.split("?")[1];
+		url = "w";
+		if (query.length > 0)
+			url += "?" + query;
+                window.location=url;
         }
     </script>
     <title>Hello, World!</title>
