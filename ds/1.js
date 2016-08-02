@@ -11,7 +11,7 @@
              newButton.value="DS";
              newButton.style.height="40px";
              newButton.style.width="40px";
-             newButton.style.backgroundImage="url(1.jpg)";//给每一个button添加背景图片
+             newButton.style.backgroundImage="url(ds/1.jpg)";//给每一个button添加背景图片
              var box = document.getElementById("bgDiv");
              box.appendChild(newButton);
              newButton.onclick=hit;
