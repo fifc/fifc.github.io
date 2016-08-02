@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+        if (navigator.platform.indexOf("Win32") != -1
+	  || navigator.platform.indexOf("Win64") != -1) {
+		var url = window.location.href;
+		var query = url.split("?")[1];
+		url = "w";
+		if (query && query.length > 0)
+			url += "?" + query;
+                window.location=url;
+                
+        }
+	document.write("=> " + window.location.href + "<br>")
+    </script>
+    <title>Hello, World!</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+
+    <iframe src=frame1.html> </iframe>
+
+    <br>
+      <a href="r.html">React.JS</a>
+    <br>
+    <a href="https://www.easycounter.com/">
+    <img src="https://www.easycounter.com/counter.php?fxfar"
+      border="0" alt="HTML Hit Counters"></a>
+
+  </body>
+</html>

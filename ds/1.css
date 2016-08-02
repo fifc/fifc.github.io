@@ -1,0 +1,19 @@
+ body,div{
+     padding:0;
+     margin:0;
+ }
+ .div1{
+     width: 400px;
+     height: 400px;
+     background: gray;
+     margin: 0 auto;
+ 
+ }
+ .btn{
+     height: 35px;
+     width: 35px;
+     background-image: url("1.jpg");
+ }
+ p{
+     text-align: center;
+ }

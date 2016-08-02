@@ -1,33 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <script>
-        if (navigator.platform.indexOf("Win32") != -1
-	  || navigator.platform.indexOf("Win64") != -1) {
-		var url = window.location.href;
-		var query = url.split("?")[1];
-		url = "w";
-		if (query && query.length > 0)
-			url += "?" + query;
-                window.location=url;
-                
-        }
-	document.write("=> " + window.location.href + "<br>")
-    </script>
-    <title>Hello, World!</title>
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-
-    <iframe src=frame1.html> </iframe>
-
-    <br>
-      <a href="r.html">React.JS</a>
-    <br>
-    <a href="https://www.easycounter.com/">
-    <img src="https://www.easycounter.com/counter.php?fxfar"
-      border="0" alt="HTML Hit Counters"></a>
-
-  </body>
-</html>
+ <!DOCTYPE html>
+ <html>
+ <head lang="en">
+     <meta charset="UTF-8">
+     <title>A Small Game</title>
+     <link rel="stylesheet" href="ds/1.css">
+     <script src="ds/1.js"></script>
+ </head>
+ <body>
+     <p style="height: 30px;font-size: 20px;color: #EEEEEE;background: #445566;">GO!</spap>
+     <div id="bgDiv" class="div1">
+ 
+     </div>
+     <p>Score: <span id="number"></span></p>
+     <div style="width: 200px;height: 50px;background:black;text-align: center;margin: 0 auto ;">
+         <input style="height: 50px;color: #ffffff;font-size: 16px;background: red;" type="button" value="Start"onclick="start()">
+         <input style="height: 50px;color: #ffffff;font-size: 16px;background: green;" type="button" value="Stop" onclick="stop()">
+     </div>
+ </body>
+ </html>
