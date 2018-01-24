@@ -30,27 +30,39 @@
       <a href="https://facebook.github.io/react" target="_blank">facebook.github.io/react</a>.
     </p>
     <script>
-      var ExampleApplication = React.createClass({
-        render: function() {
-          var elapsed = Math.round(this.props.elapsed  / 100);
-          var seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );
-          var message =
-            'React has been successfully running for ' + seconds + ' seconds.';
 
-          return React.DOM.p(null, message);
-        }
-      });
+class Timer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { seconds: 0 };
+  }
 
-      // Call React.createFactory instead of directly call ExampleApplication({...}) in React.render
-      var ExampleApplicationFactory = React.createFactory(ExampleApplication);
+  tick() {
+    this.setState(prevState => ({
+      seconds: prevState.seconds + 1
+    }));
+  }
 
-      var start = new Date().getTime();
-      setInterval(function() {
-        ReactDOM.render(
-          ExampleApplicationFactory({elapsed: new Date().getTime() - start}),
-          document.getElementById('container')
-        );
-      }, 1000);
+  componentDidMount() {
+    this.interval = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  render() {
+    return React.createElement(
+      "div",
+      null,
+      "Seconds: ",
+      this.state.seconds
+    );
+  }
+}
+
+ReactDOM.render(React.createElement(Timer, null), document.getElementById('container'));
+
     </script>
 
     <p><a href="https://www.easycounter.com/">
